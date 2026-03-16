@@ -1,0 +1,204 @@
+/* --- ESTILOS DE IDENTIDAD HEYVI --- */
+:root {
+    --color-beige: #C8B29B;
+    --color-beige-dark: #A68F78;
+    --color-beige-light: #F5EFEB;
+    --color-text-dark: #333333;
+    --color-text-light: #666666;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f2f5;
+    color: var(--color-text-dark);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, .serif-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.text-heyvi { color: var(--color-beige); }
+.bg-heyvi { background-color: var(--color-beige); }
+.bg-heyvi-light { background-color: var(--color-beige-light); }
+.border-heyvi { border-color: var(--color-beige); }
+.bg-background-light { background-color: var(--color-beige-light); }
+
+/* Efecto Papel (Card Style) */
+.paper-sheet {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border: 1px solid rgba(200, 178, 155, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Decoración sutil en esquinas */
+.paper-sheet::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-beige), #fff);
+}
+
+/* Tablas personalizadas */
+.budget-table th {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-text-dark);
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-beige);
+    padding-bottom: 12px;
+}
+.budget-table td {
+    padding: 16px 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+.budget-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Language Switcher */
+.lang-switch {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-switch button {
+    background-color: white;
+    border: 1px solid var(--color-beige);
+    color: var(--color-beige);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.lang-switch button.active,
+.lang-switch button:hover {
+    background-color: var(--color-beige);
+    color: white;
+}
+
+/* Hotel Cards Features */
+.feature-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--color-beige);
+    font-weight: 500;
+}
+
+.hotel-card-price {
+    font-size: 1.5rem;
+    color: var(--color-beige);
+    font-weight: 500;
+}
+
+/* Logo Container in Header */
+.logo-container img {
+    max-height: 140px;
+    width: auto;
+}
+
+/* Footer Logo */
+.footer-logo img {
+    max-height: 120px;
+    width: auto;
+}
+
+/* Section title font */
+.section-title {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Service cards hover accent */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-beige), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.service-card:hover::before {
+    opacity: 1;
+}
+.service-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Image aspect ratio helpers */
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Pen images rotation for better grid fill */
+.pen-rotate-left {
+    transform: rotate(-15deg) scale(1.1);
+}
+.pen-rotate-right {
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* Investment cards */
+.investment-card {
+    background-color: var(--color-beige-light);
+    border: 1px solid rgba(200, 178, 155, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.investment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(200, 178, 155, 0.2);
+}
+
+/* --- ESTILOS PARA IMPRESIÓN (PDF) --- */
+@media print {
+    .lang-switch, nav, button, .no-print {
+        display: none !important;
+    }
+    body {
+        background-color: white;
+        color: black;
+    }
+    .paper-sheet {
+        box-shadow: none;
+        border: 1px solid #eee;
+        margin-bottom: 20px;
+        page-break-inside: avoid;
+    }
+    .hero-bg {
+        height: auto !important;
+        min-height: 300px;
+    }
+    header {
+        box-shadow: none;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    /* Asegurar que los colores de fondo se impriman */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}
