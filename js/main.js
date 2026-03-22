@@ -7,7 +7,7 @@ const translations = {
         nav_gifts: "Regalos Premium",
         nav_services: "Servicios",
         nav_addon: "Extras",
-        nav_budget: "Presupuesto",
+        nav_budget: "Resumen de Inversión",
 
         // Hero
         hero_subtitle: "Visión 2026: Elevando la Experiencia",
@@ -143,7 +143,7 @@ const translations = {
         essence_cost_units: "mín. por caja",
 
         // Budget
-        budget_title: "Presupuesto",
+        budget_title: "Resumen de Inversión",
         agency_label: "Honorarios de Gestión de Agencia",
         agency_desc: "Incluye: Búsqueda y gestión de todos los proveedores, diseño de experiencia, gestión integral del Run of Show (cronograma del evento), y un Director de Evento dedicado in-situ junto a un equipo de staff de 3 personas (más de 10 horas).",
         vip_label: "Fee de Agencia Adicional (Evento Previo)",
@@ -165,7 +165,7 @@ const translations = {
         nav_gifts: "Premium Gifts",
         nav_services: "Services",
         nav_addon: "Add-Ons",
-        nav_budget: "Budget",
+        nav_budget: "Investment Summary",
 
         // Hero
         hero_subtitle: "The 2026 Event Vision: Elevating the Experience",
@@ -301,7 +301,7 @@ const translations = {
         essence_cost_units: "min. per box",
 
         // Budget
-        budget_title: "Budget",
+        budget_title: "Investment Summary",
         agency_label: "Agency Management Fee",
         agency_desc: "Includes: Sourcing and management of all vendors, experience design, comprehensive Run of Show management, and a dedicated on-site Event Director + Crew Team of 3 (10+ hours).",
         vip_label: "Optional Add-On: VIP Press Dinner",
